@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: #292626;
+    overflow:auto;
+  }
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+  .candle {
+    height: 80px;
+    width: 10px;
+    background-color: rgb(107, 40, 48);
+  }
+  .candle-flame {
+    position: absolute;
+    top: 21%;
+    background: linear-gradient(rgb(224, 216, 216) 2%, gold);
+    border-radius: 50% 50% 30% 30%;
+    width: 14px;
+    height: 30px;
+    box-shadow: 5px 5px 15px gold;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+  .up-container {
+    height: 100px;
+    width: 200px;
+    background-color: rgb(238, 130, 148);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .container {
+    height: 150px;
+    width: 330px;
+    background-color: brown;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    gap: 20px;
+  }
+  .wish {
+    position: absolute;
+    top: 95%;
+    left: 25%;
+  }
+  .wish span {
+    font-size: 50px;
+    display: table-cell;
+    padding: 10px;
+    animation-name: dance;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-direction: alternate-reverse;
+  }
+  #h1 { color: gold; }
+  #a1 { color: orangered; }
+  #p1 { color: red; }
+  #p2 { color: rgb(194, 66, 87); }
+  #y1 { color: purple; }
+  #b { color: brown; }
+  #i { color: darkblue; }
+  #r { color: lime; }
+  #t { color: olivedrab; }
+  #h2 { color: turquoise; }
+  #d { color: blueviolet; }
+  #a2 { color: yellow; }
+  #y2 { color: crimson; }
+  @keyframes dance {
+    0% { transform: rotate(-25deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(25deg); }
+  }
+  @keyframes move {
+    0% { transform: rotate(-4deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(4deg); }
+  }
+  @keyframes float {
+    from { transform: translateY(100vh); opacity: 1; }
+    to { transform: translateY(-300vh); opacity: 0; }
+  }
+  #ballon-container {
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: opacity 500ms;
+  }
+  .balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+  }
+  .balloon::before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .balloon::after {
+    content: "";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
